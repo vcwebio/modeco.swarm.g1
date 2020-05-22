@@ -1,0 +1,5 @@
+swarm_g1_ekg_elasticsearch_volume:/usr/share/elasticsearch/data
+swarm_g1_ekg_grafana_volume:/var/lib/grafana
+swarm_g1_export_streamsets_volume:/data
+swarm_g1_processor_streamsets_volume:/data
+

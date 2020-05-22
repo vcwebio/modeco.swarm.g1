@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# START CONFIGURATION
+export CONTECO_DC_GLOBAL_PACKAGE_CONTECO="filebeat.base"
+export CONTECO_DC_GLOBAL_PACKAGE_TAG="7.1.1"
+export CONTECO_DC_GLOBAL_STACKNAMES="container_logs"
+export CONTECO_DC_GLOBAL_BOOTSTACKS=""
+export CONTECO_DC_GLOBAL_RUNSTACKS="container_logs"
+export CONTECO_DC_GLOBAL_VOLUME_LIST="swarm_g1_container_logs_filebeat_volume"
+export CONTECO_DC_GLOBAL_VOLUME_INITIALISED=""
+# END CONFIGURATION
+
+export INGEST_CONTAINER_LOGS_ENVIRONMENT_FILEPATHS="/hostfs/var/lib/docker/containers/*/*.log"
+export INGEST_CONTAINER_LOGS_ENVIRONMENT_FILEPATHS_MAPPING=",'/var/lib/docker/containers:/hostfs/var/lib/docker/containers:rw'"
+export INGEST_CONTAINER_LOGS_ENVIRONMENT_OUTPUT_KAFKA="true"
+export INGEST_CONTAINER_LOGS_ENVIRONMENT_OUTPUT_CONFIG_KAFKA_TOPIC="container_logs_raw"

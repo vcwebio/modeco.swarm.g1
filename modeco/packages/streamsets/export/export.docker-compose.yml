@@ -1,0 +1,26 @@
+---
+version: '3'
+services:
+
+# START SERVICE streamsets.base
+  streamsets:
+    image: ${CONTECO_REGISTRY}${CONTECO_REALM_RUNTIME}/conteco.streamsets.base:3.10.1
+    environment: ['SDC_JAVA_OPTS=-Xmx${EXPORT_DEPLOY_RESOURCES_RESERVATIONS_MEMORY} -Xms${EXPORT_DEPLOY_RESOURCES_RESERVATIONS_MEMORY}']
+    command: []
+    volumes: ['swarm_g1_export_streamsets_volume:/data']
+    ports: []
+    networks: [swarm_overlay]
+    deploy:
+      mode: replicated
+      resources:
+        limits:
+          cpus: '${EXPORT_DEPLOY_RESOURCES_LIMITS_CPUS}'
+          memory: '${EXPORT_DEPLOY_RESOURCES_LIMITS_MEMORY}'
+        reservations:
+          cpus: '${EXPORT_DEPLOY_RESOURCES_RESERVATIONS_CPUS}'
+          memory: '${EXPORT_DEPLOY_RESOURCES_RESERVATIONS_MEMORY}'
+      labels: [${EXPORT_DEPLOY_LABELS}]
+# END SERVICE streamsets.base
+
+volumes: {swarm_g1_export_streamsets_volume: { external: true }}
+networks: {swarm_overlay: { external: true }}
