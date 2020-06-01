@@ -12,6 +12,7 @@ services:
     networks: [swarm_overlay]
     deploy:
       mode: replicated
+      replicas: ${EXPORT_DEPLOY_REPLICAS}
       resources:
         limits:
           cpus: '${EXPORT_DEPLOY_RESOURCES_LIMITS_CPUS}'
@@ -19,7 +20,10 @@ services:
         reservations:
           cpus: '${EXPORT_DEPLOY_RESOURCES_RESERVATIONS_CPUS}'
           memory: '${EXPORT_DEPLOY_RESOURCES_RESERVATIONS_MEMORY}'
+      placement:
+        constraints: [${EXPORT_DEPLOY_PLACEMENT_CONSTRAINTS}]
       labels: [${EXPORT_DEPLOY_LABELS}]
+    labels: [${EXPORT_LABELS}]
 # END SERVICE streamsets.base
 
 volumes: {swarm_g1_export_streamsets_volume: { external: true }}

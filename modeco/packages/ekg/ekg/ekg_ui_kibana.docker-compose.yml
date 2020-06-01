@@ -12,6 +12,7 @@ services:
     networks: [modeco_overlay, swarm_overlay]
     deploy:
       mode: replicated
+      replicas: ${EKG_UI_KIBANA_DEPLOY_REPLICAS}
       resources:
         limits:
           cpus: '${EKG_UI_KIBANA_DEPLOY_RESOURCES_LIMITS_CPUS}'
@@ -19,7 +20,10 @@ services:
         reservations:
           cpus: '${EKG_UI_KIBANA_DEPLOY_RESOURCES_RESERVATIONS_CPUS}'
           memory: '${EKG_UI_KIBANA_DEPLOY_RESOURCES_RESERVATIONS_MEMORY}'
+      placement:
+        constraints: [${EKG_UI_KIBANA_DEPLOY_PLACEMENT_CONSTRAINTS}]
       labels: [traefik.enable=true,traefik.docker.network=modeco_overlay, traefik.http.services.swarm_g1_ekg_kibana.loadbalancer.server.port=80, traefik.http.routers.swarm_g1_ekg_kibana.entrypoints=conteco, traefik.http.routers.swarm_g1_ekg_kibana.rule=PathPrefix("/swarm/ekg/kibana")]
+    labels: [${EKG_UI_KIBANA_LABELS}]
 # END SERVICE nginx.rewrite
 
 volumes: {}
