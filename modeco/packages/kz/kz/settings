@@ -6,7 +6,7 @@ export CONTECO_DC_GLOBAL_PACKAGE_TAG="5.4.0"
 export CONTECO_DC_GLOBAL_STACKNAMES="kz"
 export CONTECO_DC_GLOBAL_BOOTSTACKS="kz"
 export CONTECO_DC_GLOBAL_RUNSTACKS=""
-export CONTECO_DC_GLOBAL_VOLUME_LIST="swarm_g1_kz_kafka_secrets_volume,swarm_g1_kz_kafka_data_volume,swarm_g1_kz_zookeeper_secrets_volume,swarm_g1_kz_zookeeper_data_volume,swarm_g1_kz_zookeeper_log_volume"
+export CONTECO_DC_GLOBAL_VOLUME_LIST="${CONTECO_STACKPREFIX}_kafka_secrets_volume,${CONTECO_STACKPREFIX}_kafka_data_volume,${CONTECO_STACKPREFIX}_zookeeper_secrets_volume,${CONTECO_STACKPREFIX}_zookeeper_data_volume,${CONTECO_STACKPREFIX}_zookeeper_log_volume"
 export CONTECO_DC_GLOBAL_VOLUME_INITIALISED=""
 # END CONFIGURATION
 

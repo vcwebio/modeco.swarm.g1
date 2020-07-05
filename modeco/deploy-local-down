@@ -6,12 +6,12 @@ prefix="swarm_$2"
 
 executionplane --silent docker container prune --force
 
-if [[ "swarm_g1_ekg_elasticsearch_volume" == "$prefix"* ]] ; then
+if [[ "_elasticsearch_volume" == "$prefix"* ]] ; then
 		continue="true"
 		while [[ "true" == "$continue" ]] ;
 		do
-			executionplane docker volume rm "swarm_g1_ekg_elasticsearch_volume"
-			result=$(docker volume ls | grep "swarm_g1_ekg_elasticsearch_volume")
+			executionplane docker volume rm "_elasticsearch_volume"
+			result=$(docker volume ls | grep "_elasticsearch_volume")
 			if [[ "$result" == "" ]] ; then
 				continue="false"
 			else
@@ -20,12 +20,12 @@ if [[ "swarm_g1_ekg_elasticsearch_volume" == "$prefix"* ]] ; then
 		done;
 	fi
 	
-if [[ "swarm_g1_ekg_grafana_volume" == "$prefix"* ]] ; then
+if [[ "_grafana_volume" == "$prefix"* ]] ; then
 		continue="true"
 		while [[ "true" == "$continue" ]] ;
 		do
-			executionplane docker volume rm "swarm_g1_ekg_grafana_volume"
-			result=$(docker volume ls | grep "swarm_g1_ekg_grafana_volume")
+			executionplane docker volume rm "_grafana_volume"
+			result=$(docker volume ls | grep "_grafana_volume")
 			if [[ "$result" == "" ]] ; then
 				continue="false"
 			else
@@ -34,12 +34,12 @@ if [[ "swarm_g1_ekg_grafana_volume" == "$prefix"* ]] ; then
 		done;
 	fi
 	
-if [[ "swarm_g1_ingest_container_logs_filebeat_volume" == "$prefix"* ]] ; then
+if [[ "_filebeat_volume" == "$prefix"* ]] ; then
 		continue="true"
 		while [[ "true" == "$continue" ]] ;
 		do
-			executionplane docker volume rm "swarm_g1_ingest_container_logs_filebeat_volume"
-			result=$(docker volume ls | grep "swarm_g1_ingest_container_logs_filebeat_volume")
+			executionplane docker volume rm "_filebeat_volume"
+			result=$(docker volume ls | grep "_filebeat_volume")
 			if [[ "$result" == "" ]] ; then
 				continue="false"
 			else
@@ -48,12 +48,12 @@ if [[ "swarm_g1_ingest_container_logs_filebeat_volume" == "$prefix"* ]] ; then
 		done;
 	fi
 	
-if [[ "swarm_g1_ingest_container_settings_filebeat_volume" == "$prefix"* ]] ; then
+if [[ "_filebeat_volume" == "$prefix"* ]] ; then
 		continue="true"
 		while [[ "true" == "$continue" ]] ;
 		do
-			executionplane docker volume rm "swarm_g1_ingest_container_settings_filebeat_volume"
-			result=$(docker volume ls | grep "swarm_g1_ingest_container_settings_filebeat_volume")
+			executionplane docker volume rm "_filebeat_volume"
+			result=$(docker volume ls | grep "_filebeat_volume")
 			if [[ "$result" == "" ]] ; then
 				continue="false"
 			else
@@ -62,12 +62,12 @@ if [[ "swarm_g1_ingest_container_settings_filebeat_volume" == "$prefix"* ]] ; th
 		done;
 	fi
 	
-if [[ "swarm_g1_ingest_journalctl_filebeat_volume" == "$prefix"* ]] ; then
+if [[ "_filebeat_volume" == "$prefix"* ]] ; then
 		continue="true"
 		while [[ "true" == "$continue" ]] ;
 		do
-			executionplane docker volume rm "swarm_g1_ingest_journalctl_filebeat_volume"
-			result=$(docker volume ls | grep "swarm_g1_ingest_journalctl_filebeat_volume")
+			executionplane docker volume rm "_filebeat_volume"
+			result=$(docker volume ls | grep "_filebeat_volume")
 			if [[ "$result" == "" ]] ; then
 				continue="false"
 			else
@@ -76,12 +76,12 @@ if [[ "swarm_g1_ingest_journalctl_filebeat_volume" == "$prefix"* ]] ; then
 		done;
 	fi
 	
-if [[ "swarm_g1_kz_kafka_secrets_volume" == "$prefix"* ]] ; then
+if [[ "_kafka_secrets_volume" == "$prefix"* ]] ; then
 		continue="true"
 		while [[ "true" == "$continue" ]] ;
 		do
-			executionplane docker volume rm "swarm_g1_kz_kafka_secrets_volume"
-			result=$(docker volume ls | grep "swarm_g1_kz_kafka_secrets_volume")
+			executionplane docker volume rm "_kafka_secrets_volume"
+			result=$(docker volume ls | grep "_kafka_secrets_volume")
 			if [[ "$result" == "" ]] ; then
 				continue="false"
 			else
@@ -90,12 +90,12 @@ if [[ "swarm_g1_kz_kafka_secrets_volume" == "$prefix"* ]] ; then
 		done;
 	fi
 	
-if [[ "swarm_g1_kz_kafka_data_volume" == "$prefix"* ]] ; then
+if [[ "_kafka_data_volume" == "$prefix"* ]] ; then
 		continue="true"
 		while [[ "true" == "$continue" ]] ;
 		do
-			executionplane docker volume rm "swarm_g1_kz_kafka_data_volume"
-			result=$(docker volume ls | grep "swarm_g1_kz_kafka_data_volume")
+			executionplane docker volume rm "_kafka_data_volume"
+			result=$(docker volume ls | grep "_kafka_data_volume")
 			if [[ "$result" == "" ]] ; then
 				continue="false"
 			else
@@ -104,12 +104,12 @@ if [[ "swarm_g1_kz_kafka_data_volume" == "$prefix"* ]] ; then
 		done;
 	fi
 	
-if [[ "swarm_g1_kz_zookeeper_secrets_volume" == "$prefix"* ]] ; then
+if [[ "_zookeeper_secrets_volume" == "$prefix"* ]] ; then
 		continue="true"
 		while [[ "true" == "$continue" ]] ;
 		do
-			executionplane docker volume rm "swarm_g1_kz_zookeeper_secrets_volume"
-			result=$(docker volume ls | grep "swarm_g1_kz_zookeeper_secrets_volume")
+			executionplane docker volume rm "_zookeeper_secrets_volume"
+			result=$(docker volume ls | grep "_zookeeper_secrets_volume")
 			if [[ "$result" == "" ]] ; then
 				continue="false"
 			else
@@ -118,12 +118,12 @@ if [[ "swarm_g1_kz_zookeeper_secrets_volume" == "$prefix"* ]] ; then
 		done;
 	fi
 	
-if [[ "swarm_g1_kz_zookeeper_data_volume" == "$prefix"* ]] ; then
+if [[ "_zookeeper_data_volume" == "$prefix"* ]] ; then
 		continue="true"
 		while [[ "true" == "$continue" ]] ;
 		do
-			executionplane docker volume rm "swarm_g1_kz_zookeeper_data_volume"
-			result=$(docker volume ls | grep "swarm_g1_kz_zookeeper_data_volume")
+			executionplane docker volume rm "_zookeeper_data_volume"
+			result=$(docker volume ls | grep "_zookeeper_data_volume")
 			if [[ "$result" == "" ]] ; then
 				continue="false"
 			else
@@ -132,12 +132,12 @@ if [[ "swarm_g1_kz_zookeeper_data_volume" == "$prefix"* ]] ; then
 		done;
 	fi
 	
-if [[ "swarm_g1_kz_zookeeper_log_volume" == "$prefix"* ]] ; then
+if [[ "_zookeeper_log_volume" == "$prefix"* ]] ; then
 		continue="true"
 		while [[ "true" == "$continue" ]] ;
 		do
-			executionplane docker volume rm "swarm_g1_kz_zookeeper_log_volume"
-			result=$(docker volume ls | grep "swarm_g1_kz_zookeeper_log_volume")
+			executionplane docker volume rm "_zookeeper_log_volume"
+			result=$(docker volume ls | grep "_zookeeper_log_volume")
 			if [[ "$result" == "" ]] ; then
 				continue="false"
 			else
@@ -146,12 +146,12 @@ if [[ "swarm_g1_kz_zookeeper_log_volume" == "$prefix"* ]] ; then
 		done;
 	fi
 	
-if [[ "swarm_g1_metrics_node_metrics_node_volume" == "$prefix"* ]] ; then
+if [[ "_metrics_node_volume" == "$prefix"* ]] ; then
 		continue="true"
 		while [[ "true" == "$continue" ]] ;
 		do
-			executionplane docker volume rm "swarm_g1_metrics_node_metrics_node_volume"
-			result=$(docker volume ls | grep "swarm_g1_metrics_node_metrics_node_volume")
+			executionplane docker volume rm "_metrics_node_volume"
+			result=$(docker volume ls | grep "_metrics_node_volume")
 			if [[ "$result" == "" ]] ; then
 				continue="false"
 			else
@@ -160,12 +160,12 @@ if [[ "swarm_g1_metrics_node_metrics_node_volume" == "$prefix"* ]] ; then
 		done;
 	fi
 	
-if [[ "swarm_g1_metrics_overlay_metrics_overlay_volume" == "$prefix"* ]] ; then
+if [[ "_metrics_overlay_volume" == "$prefix"* ]] ; then
 		continue="true"
 		while [[ "true" == "$continue" ]] ;
 		do
-			executionplane docker volume rm "swarm_g1_metrics_overlay_metrics_overlay_volume"
-			result=$(docker volume ls | grep "swarm_g1_metrics_overlay_metrics_overlay_volume")
+			executionplane docker volume rm "_metrics_overlay_volume"
+			result=$(docker volume ls | grep "_metrics_overlay_volume")
 			if [[ "$result" == "" ]] ; then
 				continue="false"
 			else
@@ -174,12 +174,12 @@ if [[ "swarm_g1_metrics_overlay_metrics_overlay_volume" == "$prefix"* ]] ; then
 		done;
 	fi
 	
-if [[ "swarm_g1_export_streamsets_volume" == "$prefix"* ]] ; then
+if [[ "_streamsets_volume" == "$prefix"* ]] ; then
 		continue="true"
 		while [[ "true" == "$continue" ]] ;
 		do
-			executionplane docker volume rm "swarm_g1_export_streamsets_volume"
-			result=$(docker volume ls | grep "swarm_g1_export_streamsets_volume")
+			executionplane docker volume rm "_streamsets_volume"
+			result=$(docker volume ls | grep "_streamsets_volume")
 			if [[ "$result" == "" ]] ; then
 				continue="false"
 			else
@@ -188,12 +188,12 @@ if [[ "swarm_g1_export_streamsets_volume" == "$prefix"* ]] ; then
 		done;
 	fi
 	
-if [[ "swarm_g1_processor_streamsets_volume" == "$prefix"* ]] ; then
+if [[ "_streamsets_volume" == "$prefix"* ]] ; then
 		continue="true"
 		while [[ "true" == "$continue" ]] ;
 		do
-			executionplane docker volume rm "swarm_g1_processor_streamsets_volume"
-			result=$(docker volume ls | grep "swarm_g1_processor_streamsets_volume")
+			executionplane docker volume rm "_streamsets_volume"
+			result=$(docker volume ls | grep "_streamsets_volume")
 			if [[ "$result" == "" ]] ; then
 				continue="false"
 			else

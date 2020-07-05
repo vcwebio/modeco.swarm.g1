@@ -3,60 +3,60 @@
 
 prefix="swarm_$2"
 
-if [[ "swarm_g1_ekg_elasticsearch_volume" == "$prefix"* ]] ; then
-	executionplane --silent docker volume create swarm_g1_ekg_elasticsearch_volume
+if [[ "_elasticsearch_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create _elasticsearch_volume
 	fi
 	
-if [[ "swarm_g1_ekg_grafana_volume" == "$prefix"* ]] ; then
-	executionplane --silent docker volume create swarm_g1_ekg_grafana_volume
+if [[ "_grafana_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create _grafana_volume
 	fi
 	
-if [[ "swarm_g1_ingest_container_logs_filebeat_volume" == "$prefix"* ]] ; then
-	executionplane --silent docker volume create swarm_g1_ingest_container_logs_filebeat_volume
+if [[ "_filebeat_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create _filebeat_volume
 	fi
 	
-if [[ "swarm_g1_ingest_container_settings_filebeat_volume" == "$prefix"* ]] ; then
-	executionplane --silent docker volume create swarm_g1_ingest_container_settings_filebeat_volume
+if [[ "_filebeat_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create _filebeat_volume
 	fi
 	
-if [[ "swarm_g1_ingest_journalctl_filebeat_volume" == "$prefix"* ]] ; then
-	executionplane --silent docker volume create swarm_g1_ingest_journalctl_filebeat_volume
+if [[ "_filebeat_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create _filebeat_volume
 	fi
 	
-if [[ "swarm_g1_kz_kafka_secrets_volume" == "$prefix"* ]] ; then
-	executionplane --silent docker volume create swarm_g1_kz_kafka_secrets_volume
+if [[ "_kafka_secrets_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create _kafka_secrets_volume
 	fi
 	
-if [[ "swarm_g1_kz_kafka_data_volume" == "$prefix"* ]] ; then
-	executionplane --silent docker volume create swarm_g1_kz_kafka_data_volume
+if [[ "_kafka_data_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create _kafka_data_volume
 	fi
 	
-if [[ "swarm_g1_kz_zookeeper_secrets_volume" == "$prefix"* ]] ; then
-	executionplane --silent docker volume create swarm_g1_kz_zookeeper_secrets_volume
+if [[ "_zookeeper_secrets_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create _zookeeper_secrets_volume
 	fi
 	
-if [[ "swarm_g1_kz_zookeeper_data_volume" == "$prefix"* ]] ; then
-	executionplane --silent docker volume create swarm_g1_kz_zookeeper_data_volume
+if [[ "_zookeeper_data_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create _zookeeper_data_volume
 	fi
 	
-if [[ "swarm_g1_kz_zookeeper_log_volume" == "$prefix"* ]] ; then
-	executionplane --silent docker volume create swarm_g1_kz_zookeeper_log_volume
+if [[ "_zookeeper_log_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create _zookeeper_log_volume
 	fi
 	
-if [[ "swarm_g1_metrics_node_metrics_node_volume" == "$prefix"* ]] ; then
-	executionplane --silent docker volume create swarm_g1_metrics_node_metrics_node_volume
+if [[ "_metrics_node_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create _metrics_node_volume
 	fi
 	
-if [[ "swarm_g1_metrics_overlay_metrics_overlay_volume" == "$prefix"* ]] ; then
-	executionplane --silent docker volume create swarm_g1_metrics_overlay_metrics_overlay_volume
+if [[ "_metrics_overlay_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create _metrics_overlay_volume
 	fi
 	
-if [[ "swarm_g1_export_streamsets_volume" == "$prefix"* ]] ; then
-	executionplane --silent docker volume create swarm_g1_export_streamsets_volume
+if [[ "_streamsets_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create _streamsets_volume
 	fi
 	
-if [[ "swarm_g1_processor_streamsets_volume" == "$prefix"* ]] ; then
-	executionplane --silent docker volume create swarm_g1_processor_streamsets_volume
+if [[ "_streamsets_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create _streamsets_volume
 	fi
 	
 if [[ "swarm_g1_ekg_elasticsearch_volume" == "$prefix"* ]] ; then
