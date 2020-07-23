@@ -24,8 +24,8 @@
 
 
 \
-$MODECO_EKG_GRAFANA_ENDPOINT_URL,\
-$MODECO_EKG_KIBANA_ENDPOINT_URL
+,\
+
 
 - type: http
   id: internal_export_streamsets_endpoint

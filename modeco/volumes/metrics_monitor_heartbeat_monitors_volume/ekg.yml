@@ -1,7 +1,7 @@
 #- type: http
 #  id: external_ekg_elasticsearch_endpoint
 #  name: EKG ElasticSearch External
-#  hosts: ["http://${MODECO_EKG_ELASTICSEARCH_ENDPOINT}"]
+#  hosts: ["http://"]
 #  check.response.status: [200]
 #  schedule: '@every 30s'
 #  fields:

@@ -1,18 +1,4 @@
 #!/usr/bin/env bash
 
-##### START MOULE CONFIGURATION SETUP #####
-DOLLAR='$'
-export MODECO_HOSTNAME="${DOLLAR}{CONTECO_HOSTNAME}"
-
-export MODECO_CONFIGURATION_KEYS='\
-$MODECO_HOSTNAME,\
-$MODECO_MODULEPREFIX,\
-$MODECO_URLPREFIX,'
-export MODECO_CONFIGURATION_FILES="\
-metrics_monitor_heartbeat_monitors_volume/ekg.yml,\
-metrics_monitor_heartbeat_monitors_volume/kz.yml,\
-metrics_monitor_heartbeat_monitors_volume/streamsets.yml"
-##### END MOULE CONFIGURATION SETUP #####
-
 ##### START MOULE CONFIGURATION KEYVALUES #####
 ##### END MOULE CONFIGURATION KEYVALUES #####
