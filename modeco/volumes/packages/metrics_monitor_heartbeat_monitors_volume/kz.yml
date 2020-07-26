@@ -11,7 +11,7 @@
     scope: module
     stack: kz
     type: internal
-    service: kafka
+    service: ksql_server
     area: endpoint
 
 - type: tcp
@@ -26,5 +26,5 @@
     scope: module
     stack: kz
     type: internal
-    service: kafka
+    service: ksql_server
     area: endpoint

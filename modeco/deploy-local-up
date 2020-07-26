@@ -11,14 +11,6 @@ if [[ "module_swarm_g1_ekg_grafana_volume" == "$prefix"* ]] ; then
 	executionplane --silent docker volume create module_swarm_g1_ekg_grafana_volume
 	fi
 	
-if [[ "module_swarm_g1_metrics_monitor_heartbeat_data_volume" == "$prefix"* ]] ; then
-	executionplane --silent docker volume create module_swarm_g1_metrics_monitor_heartbeat_data_volume
-	fi
-	
-if [[ "module_swarm_g1_metrics_monitor_heartbeat_monitors_volume" == "$prefix"* ]] ; then
-	executionplane --silent docker volume create module_swarm_g1_metrics_monitor_heartbeat_monitors_volume
-	fi
-	
 if [[ "module_swarm_g1_ingest_container_logs_filebeat_volume" == "$prefix"* ]] ; then
 	executionplane --silent docker volume create module_swarm_g1_ingest_container_logs_filebeat_volume
 	fi
@@ -51,6 +43,14 @@ if [[ "module_swarm_g1_kz_zookeeper_log_volume" == "$prefix"* ]] ; then
 	executionplane --silent docker volume create module_swarm_g1_kz_zookeeper_log_volume
 	fi
 	
+if [[ "module_swarm_g1_metrics_monitor_heartbeat_data_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create module_swarm_g1_metrics_monitor_heartbeat_data_volume
+	fi
+	
+if [[ "module_swarm_g1_metrics_monitor_heartbeat_monitors_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create module_swarm_g1_metrics_monitor_heartbeat_monitors_volume
+	fi
+	
 if [[ "module_swarm_g1_metrics_node_metrics_node_volume" == "$prefix"* ]] ; then
 	executionplane --silent docker volume create module_swarm_g1_metrics_node_metrics_node_volume
 	fi
@@ -73,10 +73,6 @@ if [[ "module_swarm_g1_ekg_elasticsearch_volume" == "$prefix"* ]] ; then
 		
 if [[ "module_swarm_g1_ekg_grafana_volume" == "$prefix"* ]] ; then
 			executionplane --silent docker run -v module_swarm_g1_ekg_grafana_volume:/var/lib/grafana ${CONTECO_REGISTRY}$1 --interactive tar -C / -xvf /modeco/volumes/ekg_grafana_volume.tar
-		fi
-		
-if [[ "module_swarm_g1_metrics_monitor_heartbeat_monitors_volume" == "$prefix"* ]] ; then
-			executionplane --silent docker run -v module_swarm_g1_metrics_monitor_heartbeat_monitors_volume:/usr/share/heartbeat/monitors.d ${CONTECO_REGISTRY}$1 --interactive cp -r /modeco/volumes/metrics_monitor_heartbeat_monitors_volume/* /usr/share/heartbeat/monitors.d
 		fi
 		
 if [[ "module_swarm_g1_export_streamsets_volume" == "$prefix"* ]] ; then
